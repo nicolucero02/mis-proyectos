@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#241813"/>
+  <rect width="1200" height="900" fill="url(#paint0_linear)"/>
+  <rect x="104" y="110" width="320" height="574" rx="30" fill="#F4EDE1" fill-opacity="0.08" stroke="#F4EDE1" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="452" y="110" width="644" height="250" rx="30" fill="#F4EDE1" fill-opacity="0.07" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
+  <rect x="452" y="392" width="644" height="292" rx="30" fill="#C2794F" fill-opacity="0.14" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
+  <path d="M218 188C275.99 188 323 235.01 323 293C323 350.99 275.99 398 218 398C160.01 398 113 350.99 113 293C113 235.01 160.01 188 218 188Z" fill="#C2794F" fill-opacity="0.34"/>
+  <path d="M528 208H1022" stroke="#F4EDE1" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M528 492H1022" stroke="#F4EDE1" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M528 552H978" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
+  <path d="M528 612H946" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="100" y1="102" x2="1088" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4C2A22"/>
+      <stop offset="0.56" stop-color="#241813"/>
+      <stop offset="1" stop-color="#7B5848"/>
+    </linearGradient>
+  </defs>
+</svg>
