@@ -27,6 +27,7 @@ export function FeaturedPostCard({
   locale: Locale;
 }) {
   const category = getCategoryBySlug(post.categorySlug);
+  const hasImage = Boolean(post.image);
 
   return (
     <article
@@ -39,13 +40,15 @@ export function FeaturedPostCard({
           large ? "lg:min-h-full" : ""
         }`}
       >
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
-          sizes={large ? "(min-width: 1024px) 45vw, 100vw" : "(min-width: 1024px) 25vw, 100vw"}
-        />
+        {hasImage ? (
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            className="object-cover brightness-[0.93] transition duration-700 ease-out group-hover:scale-[1.035] group-hover:brightness-[1.02]"
+            sizes={large ? "(min-width: 1024px) 45vw, 100vw" : "(min-width: 1024px) 25vw, 100vw"}
+          />
+        ) : null}
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,7,0.1),rgba(9,8,7,0.52)),radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_30%)] transition duration-500 group-hover:bg-[linear-gradient(180deg,rgba(9,8,7,0.04),rgba(9,8,7,0.6)),radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_30%)]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
         <div className="media-badge absolute left-5 top-5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] backdrop-blur-sm">

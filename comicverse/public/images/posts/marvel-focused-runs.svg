@@ -1,19 +1,36 @@
 <svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="900" fill="#2A140E"/>
-  <rect width="1200" height="900" fill="url(#paint0_linear)"/>
-  <rect x="118" y="118" width="300" height="290" rx="30" fill="#F0C777" fill-opacity="0.22" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
-  <rect x="118" y="438" width="300" height="290" rx="30" fill="#17100D" fill-opacity="0.7" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <rect x="448" y="118" width="636" height="610" rx="36" fill="#1F140F" fill-opacity="0.78" stroke="#F4EDE1" stroke-opacity="0.14" stroke-width="2"/>
-  <path d="M565 233H966" stroke="#F4EDE1" stroke-opacity="0.18" stroke-width="2"/>
-  <path d="M565 315H1032" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <path d="M565 397H948" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <path d="M565 479H1008" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <circle cx="886" cy="220" r="90" fill="#C2794F" fill-opacity="0.28"/>
+  <rect width="1200" height="900" fill="#24120D"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="120" y="122" width="960" height="656" rx="34" fill="#FAF1E6" fill-opacity="0.06" stroke="#FFF4E8" stroke-opacity="0.14" stroke-width="2"/>
+  <rect x="178" y="172" width="316" height="556" rx="24" fill="#C24631"/>
+  <rect x="178" y="172" width="316" height="556" rx="24" fill="url(#heroGlow)"/>
+  <rect x="526" y="172" width="496" height="260" rx="24" fill="#2C1712"/>
+  <rect x="526" y="468" width="496" height="260" rx="24" fill="#23140F"/>
+  <circle cx="336" cy="300" r="86" fill="#F0C777" fill-opacity="0.28"/>
+  <path d="M296 486C296 432.98 338.98 390 392 390H398C451.02 390 494 432.98 494 486V728H296V486Z" fill="#8F221D"/>
+  <path d="M330 430L360 374H432L460 430L410 470H380L330 430Z" fill="#D8A15D"/>
+  <path d="M564 238H946" stroke="#F7EDE2" stroke-opacity="0.22" stroke-width="3"/>
+  <path d="M564 288H908" stroke="#F7EDE2" stroke-opacity="0.16" stroke-width="3"/>
+  <path d="M564 338H964" stroke="#F7EDE2" stroke-opacity="0.16" stroke-width="3"/>
+  <path d="M564 534H946" stroke="#F7EDE2" stroke-opacity="0.18" stroke-width="3"/>
+  <path d="M564 584H892" stroke="#F7EDE2" stroke-opacity="0.14" stroke-width="3"/>
+  <path d="M564 634H934" stroke="#F7EDE2" stroke-opacity="0.14" stroke-width="3"/>
+  <path d="M884 218L903 256H944L911 279L924 318L884 293L844 318L857 279L824 256H865L884 218Z" fill="#F0C777" fill-opacity="0.82"/>
+  <rect width="1200" height="900" fill="url(#contrast)"/>
   <defs>
-    <linearGradient id="paint0_linear" x1="102" y1="98" x2="1072" y2="794" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5B2F17"/>
-      <stop offset="0.55" stop-color="#2A140E"/>
-      <stop offset="1" stop-color="#7A431B"/>
+    <linearGradient id="bg" x1="110" y1="100" x2="1090" y2="802" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6C2416"/>
+      <stop offset="0.5" stop-color="#28130E"/>
+      <stop offset="1" stop-color="#804119"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(336 282) rotate(90) scale(220 170)">
+      <stop stop-color="#FFDB83" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#FFDB83" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="contrast" x1="600" y1="0" x2="600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000000" stop-opacity="0.02"/>
+      <stop offset="0.58" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.16"/>
     </linearGradient>
   </defs>
 </svg>

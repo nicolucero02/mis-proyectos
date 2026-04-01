@@ -1,17 +1,41 @@
 <svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="900" fill="#140E12"/>
-  <rect width="1200" height="900" fill="url(#paint0_linear)"/>
-  <rect x="94" y="116" width="368" height="604" rx="30" fill="#1A1216" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <rect x="490" y="116" width="246" height="236" rx="28" fill="#F4EDE1" fill-opacity="0.06" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <rect x="490" y="384" width="246" height="336" rx="28" fill="#C2794F" fill-opacity="0.14" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
-  <rect x="764" y="116" width="342" height="604" rx="32" fill="#0D090B" fill-opacity="0.8" stroke="#F4EDE1" stroke-opacity="0.1" stroke-width="2"/>
-  <circle cx="937" cy="313" r="122" fill="#6E2D3D" fill-opacity="0.32"/>
-  <circle cx="937" cy="313" r="82" stroke="#F4EDE1" stroke-opacity="0.12" stroke-width="2"/>
+  <rect width="1200" height="900" fill="#160E12"/>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="198" y="80" width="804" height="740" rx="32" fill="#120B0E" fill-opacity="0.56" stroke="#F8EFE7" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M350 138H850V760H350V138Z" fill="#1A1216"/>
+  <path d="M406 138H794V760H406V138Z" fill="url(#hall)"/>
+  <path d="M486 256H714V618H486V256Z" fill="#080607"/>
+  <path d="M518 292H682V586H518V292Z" fill="#31171F"/>
+  <path d="M592 340C620 340 642 364 642 394V570H542V394C542 364 564 340 592 340Z" fill="#090709"/>
+  <path d="M575 316C575 306.611 582.611 299 592 299C601.389 299 609 306.611 609 316V340H575V316Z" fill="#151014"/>
+  <path d="M406 246L350 276V138H406V246Z" fill="#26161D"/>
+  <path d="M794 246L850 276V138H794V246Z" fill="#26161D"/>
+  <path d="M368 698H832" stroke="#F8EFE7" stroke-opacity="0.08" stroke-width="3"/>
+  <circle cx="880" cy="206" r="120" fill="#8F324A" fill-opacity="0.24"/>
+  <circle cx="308" cy="686" r="112" fill="#C2794F" fill-opacity="0.12"/>
+  <rect width="1200" height="900" fill="url(#vignette)"/>
+  <rect x="0" y="0" width="1200" height="900" fill="#000000" fill-opacity="0.06" filter="url(#grain)"/>
   <defs>
-    <linearGradient id="paint0_linear" x1="110" y1="92" x2="1088" y2="792" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2B1720"/>
-      <stop offset="0.56" stop-color="#140E12"/>
-      <stop offset="1" stop-color="#3A1825"/>
+    <linearGradient id="bg" x1="148" y1="88" x2="1040" y2="812" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#321722"/>
+      <stop offset="0.52" stop-color="#140E12"/>
+      <stop offset="1" stop-color="#3F1B28"/>
     </linearGradient>
+    <linearGradient id="hall" x1="600" y1="138" x2="600" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#302027"/>
+      <stop offset="0.44" stop-color="#140F13"/>
+      <stop offset="1" stop-color="#050405"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 450) rotate(90) scale(560 760)">
+      <stop offset="0.58" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.38"/>
+    </radialGradient>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.2"/>
+      </feComponentTransfer>
+    </filter>
   </defs>
 </svg>
