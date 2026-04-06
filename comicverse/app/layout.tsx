@@ -6,8 +6,13 @@ import { ThemeScript } from "@/components/theme-script";
 import { getDictionary } from "@/lib/i18n";
 import { getLocale } from "@/lib/locale";
 
+export const runtime = "nodejs";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://comicverse.local"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://comicverse.local")
+  ),
   title: {
     default: "ComicVerse",
     template: "%s | ComicVerse"
