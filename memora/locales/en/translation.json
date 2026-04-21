@@ -1,0 +1,104 @@
+{
+  "common": {
+    "language": "Language",
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "header": {
+    "eyebrow": "Your emotional archive",
+    "description": "Save memories, ideas, and personal notes in a serene, intimate space that is easy to revisit.",
+    "savedMemories": "Saved memories",
+    "newMemory": "New memory"
+  },
+  "dashboard": {
+    "rhythm": "Rhythm",
+    "rhythmEmpty": "Start today",
+    "rhythmGrowing": "Your memory is still growing",
+    "format": "Format",
+    "formatValue": "Title, emotion, and context",
+    "storage": "Storage",
+    "storageValue": "Local, private, and frictionless"
+  },
+  "emptyState": {
+    "title": "Your first memory starts here",
+    "description": "Create an entry to capture a fleeting idea, a special date, or something you want to feel again later.",
+    "cta": "Create my first memory"
+  },
+  "memoryCard": {
+    "viewDetail": "View detail"
+  },
+  "memoryDetail": {
+    "eyebrow": "Saved memory",
+    "close": "Close detail"
+  },
+  "memoryForm": {
+    "eyebrow": "New memory",
+    "title": "Save a moment",
+    "description": "Capture what is worth reading again: a feeling, an idea, or a moment you do not want to lose.",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Optional: OpenAI can suggest it",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Write what happened, how you felt, or why this matters.",
+    "dateLabel": "Date",
+    "tagLabel": "Tag",
+    "emotionLabel": "Emotion",
+    "suggestTitle": "Suggest title",
+    "detectEmotion": "Detect emotion",
+    "summarize": "Summarize",
+    "cancel": "Cancel",
+    "save": "Save memory",
+    "saving": "Saving...",
+    "close": "Close modal",
+    "errors": {
+      "missingDescriptionSave": "Write a description before saving the memory.",
+      "missingDescriptionSummarize": "Write a description before summarizing it.",
+      "missingDescriptionTitle": "Write a description before suggesting a title.",
+      "missingDescriptionEmotion": "Write a description before detecting the emotion.",
+      "saveFailed": "The memory could not be saved.",
+      "summarizeFailed": "The memory could not be summarized.",
+      "titleFailed": "The title could not be suggested.",
+      "emotionFailed": "The emotion could not be detected."
+    }
+  },
+  "insights": {
+    "simpleAnalysis": "Simple analysis",
+    "emotionalTone": "Your emotional tone",
+    "mostFrequentEmotion": "Most frequent emotion",
+    "noData": "No data yet",
+    "recentReading": "Recent reading",
+    "emptySummary": "There are not enough memories yet to detect a pattern.",
+    "summary": "Lately your memories reflect {{emotion}} and {{tag}} moments.",
+    "emotionDescriptors": {
+      "happy": "joyful",
+      "nostalgic": "nostalgic",
+      "important": "meaningful",
+      "peaceful": "peaceful",
+      "inspired": "creative",
+      "grateful": "grateful",
+      "fallback": "valuable"
+    },
+    "tagDescriptors": {
+      "personal": "personal",
+      "idea": "creative",
+      "travel": "exploratory",
+      "work": "work-related",
+      "family": "family",
+      "fallback": "very personal"
+    }
+  },
+  "memoryTags": {
+    "personal": "Personal",
+    "idea": "Idea",
+    "travel": "Travel",
+    "work": "Work",
+    "family": "Family"
+  },
+  "memoryEmotions": {
+    "happy": "Happy",
+    "nostalgic": "Nostalgic",
+    "important": "Important",
+    "peaceful": "At peace",
+    "inspired": "Inspired",
+    "grateful": "Grateful"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "common": {
+    "language": "Idioma",
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "header": {
+    "eyebrow": "Tu archivo emocional",
+    "description": "Guarda recuerdos, ideas y notas personales en un espacio sereno, íntimo y fácil de revisitar.",
+    "savedMemories": "Recuerdos guardados",
+    "newMemory": "Nuevo recuerdo"
+  },
+  "dashboard": {
+    "rhythm": "Ritmo",
+    "rhythmEmpty": "Comienza hoy",
+    "rhythmGrowing": "Tu memoria sigue creciendo",
+    "format": "Formato",
+    "formatValue": "Titulo, emocion y contexto",
+    "storage": "Almacenamiento",
+    "storageValue": "Local, privado y sin friccion"
+  },
+  "emptyState": {
+    "title": "El primer recuerdo empieza aqui",
+    "description": "Crea una entrada para capturar una idea fugaz, una fecha especial o algo que quieras volver a sentir mas adelante.",
+    "cta": "Crear mi primer recuerdo"
+  },
+  "memoryCard": {
+    "viewDetail": "Ver detalle"
+  },
+  "memoryDetail": {
+    "eyebrow": "Recuerdo guardado",
+    "close": "Cerrar detalle"
+  },
+  "memoryForm": {
+    "eyebrow": "Nuevo recuerdo",
+    "title": "Guardar un momento",
+    "description": "Captura lo que vale la pena volver a leer: una sensacion, una idea o un instante que no quieres perder.",
+    "titleLabel": "Titulo",
+    "titlePlaceholder": "Opcional: OpenAI puede sugerirlo",
+    "descriptionLabel": "Descripcion",
+    "descriptionPlaceholder": "Escribe lo que paso, como te sentiste o por que esto importa.",
+    "dateLabel": "Fecha",
+    "tagLabel": "Etiqueta",
+    "emotionLabel": "Emocion",
+    "suggestTitle": "Sugerir titulo",
+    "detectEmotion": "Detectar emocion",
+    "summarize": "Resumir",
+    "cancel": "Cancelar",
+    "save": "Guardar recuerdo",
+    "saving": "Guardando...",
+    "close": "Cerrar modal",
+    "errors": {
+      "missingDescriptionSave": "Escribe una descripcion para guardar el recuerdo.",
+      "missingDescriptionSummarize": "Escribe una descripcion para poder resumirla.",
+      "missingDescriptionTitle": "Escribe una descripcion para sugerir un titulo.",
+      "missingDescriptionEmotion": "Escribe una descripcion para detectar la emocion.",
+      "saveFailed": "No se pudo guardar el recuerdo.",
+      "summarizeFailed": "No se pudo resumir el recuerdo.",
+      "titleFailed": "No se pudo sugerir un titulo.",
+      "emotionFailed": "No se pudo detectar la emocion."
+    }
+  },
+  "insights": {
+    "simpleAnalysis": "Analisis simple",
+    "emotionalTone": "Tu tono emocional",
+    "mostFrequentEmotion": "Emocion mas frecuente",
+    "noData": "Sin datos todavia",
+    "recentReading": "Lectura reciente",
+    "emptySummary": "Todavia no hay recuerdos suficientes para detectar un patron.",
+    "summary": "Ultimamente tus recuerdos reflejan momentos {{emotion}} y {{tag}}.",
+    "emotionDescriptors": {
+      "happy": "alegres",
+      "nostalgic": "nostalgicos",
+      "important": "significativos",
+      "peaceful": "tranquilos",
+      "inspired": "creativos",
+      "grateful": "agradecidos",
+      "fallback": "valiosos"
+    },
+    "tagDescriptors": {
+      "personal": "personales",
+      "idea": "creativos",
+      "travel": "de descubrimiento",
+      "work": "ligados a tu trabajo",
+      "family": "familiares",
+      "fallback": "muy tuyos"
+    }
+  },
+  "memoryTags": {
+    "personal": "Personal",
+    "idea": "Idea",
+    "travel": "Viaje",
+    "work": "Trabajo",
+    "family": "Familia"
+  },
+  "memoryEmotions": {
+    "happy": "Feliz",
+    "nostalgic": "Nostalgico",
+    "important": "Importante",
+    "peaceful": "En paz",
+    "inspired": "Inspirado",
+    "grateful": "Agradecido"
+  }
+}
