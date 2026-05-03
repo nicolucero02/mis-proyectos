@@ -1,0 +1,23 @@
+body {
+    background-color: #050510;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#canvas
+{
+    background-color: #0a0a1a;
+    border: 2px solid #00d4ff;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    padding: auto;
+    box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.3),
+        0 0 40px rgba(0, 212, 255, 0.1),
+        inset 0 0 20px rgba(0, 212, 255, 0.05);
+}
