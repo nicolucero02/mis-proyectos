@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Neon Snake</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <!-- Game wrapper holds board + overlays -->
+    <div id="gameWrapper">
+      <div id="gameContainer"></div>
+
+      <div id="startScreen" class="screen">
+        <h1>Neon Serpent</h1>
+        <p class="instructions">Use arrows or WASD to move</p>
+        <button id="playButton" class="neon-btn">Play</button>
+      </div>
+
+      <div id="gameOverScreen" class="screen hidden">
+        <h2>Game Over</h2>
+        <div class="result-row">Score: <span id="finalScore">0</span></div>
+        <div class="result-row">Best: <span id="bestScore">0</span></div>
+        <div class="btn-group">
+          <button id="retryButton" class="neon-btn">Retry</button>
+          <button id="menuButton" class="neon-btn secondary">Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- #scoreContainer contains the scores -->
+    <div id="scoreContainer">
+      <div class="scoreBoard">Food: <span id="pointsEarned">0</span></div>
+      <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+    </div>
+
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers">
+      <button id="leftButton">◀️</button>
+      <div>
+        <button id="upButton">🔼</button>
+        <button id="downButton">🔽</button>
+      </div>
+      <button id="rightButton">▶️</button>
+    </div>
+
+    <footer id="gameFooter">Neon Serpent — by Nico</footer>
+
+    <audio id="bgMusic" src="../sfx/bg-music.mp3" loop preload="auto"></audio>
+    <script src="jscript.js"></script>
+  </body>
+</html>

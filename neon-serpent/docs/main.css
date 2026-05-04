@@ -1,0 +1,302 @@
+body {
+  background-color: #050510;
+  text-align: center;
+  color: #e0e0ff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* GAME WRAPPER & BOARD */
+#gameWrapper {
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  margin: 2vw auto;
+}
+
+#gameContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a1a;
+  border: solid 2px rgba(0, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 40px rgba(0, 255, 255, 0.05);
+
+  /* Grid de líneas neón sutiles */
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 1vw 1vw;
+}
+
+.gameBoardPixel {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 2px;
+  float: left;
+}
+/* GAME BOARD STYLES END*/
+
+/* SNAKE STYLES */
+.snakeBodyPixel {
+  background-color: #00ffcc;
+  box-shadow:
+    0 0 6px #00ffcc,
+    0 0 12px #00ffcc,
+    0 0 18px rgba(0, 255, 204, 0.6);
+}
+/* SNAKE STYLES END*/
+
+/* FOOD STYLES */
+.food {
+  background-color: #ff00ff;
+  box-shadow:
+    0 0 6px #ff00ff,
+    0 0 12px #ff00ff,
+    0 0 18px rgba(255, 0, 255, 0.7);
+  border-radius: 50%;
+}
+/* FOOD STYLES END*/
+
+/* SCREENS */
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 16, 0.92);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  z-index: 10;
+  border: solid 1px rgba(0, 255, 255, 0.3);
+  box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.screen.hidden {
+  display: none;
+}
+
+.screen h1 {
+  font-size: 3vw;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.screen h2 {
+  font-size: 2.5vw;
+  color: #ff00ff;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.instructions {
+  color: #aaaacc;
+  font-size: 1vw;
+  letter-spacing: 1px;
+}
+
+.result-row {
+  color: #00ffff;
+  font-size: 1.2vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.result-row span {
+  color: #ff00ff;
+  font-size: 1.6vw;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+.neon-btn {
+  background-color: transparent;
+  border: solid 1px rgba(0, 255, 255, 0.5);
+  color: #00ffff;
+  padding: 0.6vw 2.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.neon-btn:hover {
+  background-color: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+.neon-btn.secondary {
+  border-color: rgba(255, 0, 255, 0.5);
+  color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
+}
+
+.neon-btn.secondary:hover {
+  background-color: rgba(255, 0, 255, 0.15);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1vw;
+}
+/* SCREENS END */
+
+/* SCORE STYLES */
+#scoreContainer {
+  width: 40vw;
+  display: flex;
+  margin: 1.5vw auto;
+  justify-content: space-around;
+  gap: 1vw;
+}
+
+.scoreBoard {
+  border-radius: 6px;
+  border: solid 1px rgba(0, 255, 255, 0.4);
+  color: #00ffff;
+  background-color: rgba(10, 10, 30, 0.8);
+  display: inline-block;
+  padding: 0.8vw 1.2vw;
+  width: 45%;
+  font-size: 1.1vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.2),
+    inset 0 0 10px rgba(0, 255, 255, 0.05);
+}
+
+.scoreBoard span {
+  color: #ff00ff;
+  font-size: 1.4vw;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px rgba(255, 0, 255, 0.6);
+}
+/* SCORE STYLES END */
+
+/* Hide #onScreenControllers on desktop */
+#onScreenControllers {
+  display: none;
+}
+
+#gameFooter {
+  margin-top: 2vw;
+  color: rgba(0, 255, 255, 0.4);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75vw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  /* MOBILE */
+  #gameWrapper {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  #gameContainer {
+    background-size: 2vw 2vw;
+  }
+
+  .gameBoardPixel {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  #scoreContainer {
+    width: 80vw;
+  }
+
+  .scoreBoard {
+    font-size: 3vw;
+    padding: 2vw 3vw;
+  }
+
+  .scoreBoard span {
+    font-size: 4vw;
+  }
+
+  .screen h1 {
+    font-size: 6vw;
+  }
+
+  .screen h2 {
+    font-size: 5vw;
+  }
+
+  .instructions {
+    font-size: 2.5vw;
+  }
+
+  .result-row {
+    font-size: 3vw;
+  }
+
+  .result-row span {
+    font-size: 4vw;
+  }
+
+  .neon-btn {
+    font-size: 3vw;
+    padding: 2vw 5vw;
+  }
+
+  #onScreenControllers {
+    width: 80vw;
+    margin: 5vw auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #onScreenControllers > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #onScreenControllers button {
+    background-color: rgba(10, 10, 30, 0.8);
+    height: 20vw;
+    width: 20vw;
+    font-size: 10vw;
+    border: solid 1px rgba(0, 255, 255, 0.4);
+    border-radius: 8px;
+    color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+
+  #onScreenControllers button:focus {
+    outline: none;
+  }
+
+  #onScreenControllers button:active {
+    background-color: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  }
+
+  #gameFooter {
+    font-size: 2.5vw;
+    margin-top: 4vw;
+  }
+}
