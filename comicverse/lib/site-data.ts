@@ -33,7 +33,6 @@ export type GuideArticle = GuideEntry & {
   description: LocalizedText;
   excerpt: LocalizedText;
   cover: "amber" | "midnight" | "moss" | "rose" | "slate" | "gold";
-  readingMinutes: number;
   sections: GuideSection[];
 };
 
@@ -251,7 +250,6 @@ export const guideArticles: GuideArticle[] = [
     level: { es: "Principiante", en: "Beginner" },
     focus: { es: "Marvel", en: "Marvel" },
     cover: "gold",
-    readingMinutes: 8,
     sections: [
       {
         heading: {
@@ -374,7 +372,6 @@ export const guideArticles: GuideArticle[] = [
     level: { es: "Principiante", en: "Beginner" },
     focus: { es: "Novela gráfica", en: "Graphic novels" },
     cover: "amber",
-    readingMinutes: 8,
     sections: [
       {
         heading: {
@@ -483,7 +480,6 @@ export const guideArticles: GuideArticle[] = [
     level: { es: "Intermedio", en: "Intermediate" },
     focus: { es: "Terror", en: "Horror" },
     cover: "rose",
-    readingMinutes: 8,
     sections: [
       {
         heading: {

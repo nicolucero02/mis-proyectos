@@ -2,9 +2,14 @@ import Link from "next/link";
 import { pickText, type Locale } from "@/lib/i18n";
 import type { GuideEntry } from "@/lib/site-data";
 
+const GUIDE_GLOW = "rgba(180,120,80,0.2)";
+
 export function GuideCard({ guide, locale }: { guide: GuideEntry; locale: Locale }) {
   return (
-    <article className="bg-card-surface border-subtle rounded-[1.75rem] border p-6 shadow-[0_16px_50px_rgba(20,16,13,0.06)]">
+    <article 
+      className="bg-card-surface border-subtle rounded-[1.75rem] border p-6"
+      style={{ boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 16px 50px rgba(20,16,13,0.06), 0 0 40px -16px ${GUIDE_GLOW}` }}
+    >
       <div className="text-label flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.22em]">
         <span>{pickText(guide.level, locale)}</span>
         <span>·</span>

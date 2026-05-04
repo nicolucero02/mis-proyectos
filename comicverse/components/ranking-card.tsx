@@ -1,9 +1,14 @@
 import { pickText, type Locale } from "@/lib/i18n";
 import type { RankingEntry } from "@/lib/site-data";
 
+const RANKING_GLOW = "rgba(180,120,80,0.2)";
+
 export function RankingCard({ ranking, locale }: { ranking: RankingEntry; locale: Locale }) {
   return (
-    <article className="bg-card-surface border-subtle rounded-[1.75rem] border p-6 shadow-[0_18px_60px_rgba(20,16,13,0.06)]">
+    <article 
+      className="bg-card-surface border-subtle rounded-[1.75rem] border p-6"
+      style={{ boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 18px 60px rgba(20,16,13,0.06), 0 0 40px -16px ${RANKING_GLOW}` }}
+    >
       <p className="text-label text-xs font-semibold uppercase tracking-[0.3em]">
         Ranking · {pickText(ranking.category, locale)}
       </p>

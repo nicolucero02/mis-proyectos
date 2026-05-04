@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import type { Locale } from "@/lib/i18n";
 import { LOCALE_COOKIE } from "@/lib/i18n";
 import { siteNavigation } from "@/lib/site-data";
+import { LogoAuto } from "@/components/logo";
 
 type SiteHeaderProps = {
   locale: Locale;
@@ -85,9 +86,7 @@ export function SiteHeader({ locale, labels }: SiteHeaderProps) {
     <header className="sticky top-4 z-50 mb-14">
       <div className="border-subtle relative flex items-center justify-between gap-4 rounded-full border bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(250,246,240,0.72))] px-4 py-3 shadow-[0_22px_70px_rgba(20,16,13,0.12)] backdrop-blur-xl transition-colors duration-300 dark:bg-[linear-gradient(180deg,rgba(20,18,17,0.96),rgba(12,11,10,0.92))] dark:shadow-[0_22px_70px_rgba(0,0,0,0.42)] sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[linear-gradient(135deg,#161311,#3f281f)] text-sm font-bold text-ivory shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] dark:border dark:border-white/10 dark:bg-[linear-gradient(135deg,#f6ede2,#c2794f)] dark:text-charcoal">
-            CV
-          </span>
+          <LogoAuto size={44} />
           <span className="flex flex-col">
             <span className="text-label text-[10px] font-semibold uppercase tracking-[0.34em]">
               {labels.issue}

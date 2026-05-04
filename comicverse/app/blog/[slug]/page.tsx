@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PostCard } from "@/components/post-card";
+import { CoverVisual } from "@/components/cover-visual";
 import {
-  formatReadingTime,
   getAdjacentPosts,
   getAllPostSlugs,
   getCategoryBySlug,
@@ -17,19 +17,6 @@ type PageProps = {
     slug: string;
   };
 };
-
-function coverClass(cover: string) {
-  const covers: Record<string, string> = {
-    amber: "from-[#d06a3a] via-[#a23f31] to-[#2d1d1f]",
-    midnight: "from-[#1e3259] via-[#10213e] to-[#0b1220]",
-    moss: "from-[#5b6f5c] via-[#2f4638] to-[#161d18]",
-    rose: "from-[#d37e7e] via-[#843b4e] to-[#24141b]",
-    slate: "from-[#8590a3] via-[#3c4658] to-[#111826]",
-    gold: "from-[#f0c777] via-[#b88235] to-[#352216]"
-  };
-
-  return covers[cover] ?? covers.amber;
-}
 
 export async function generateStaticParams() {
   const slugs = await getAllPostSlugs();
@@ -59,8 +46,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       <article className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
         <div className="space-y-8">
           <header className="surface overflow-hidden dark:border-white/10">
-            <div className={`bg-gradient-to-br ${coverClass(post.frontmatter.cover)}`}>
-              <div className="flex min-h-[23rem] flex-col justify-end bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_28%),linear-gradient(180deg,transparent,rgba(0,0,0,0.22))] px-6 py-8 sm:min-h-[26rem] sm:px-8 sm:py-10">
+            <CoverVisual
+              categorySlug={post.frontmatter.categorySlug}
+              className="min-h-[23rem] sm:min-h-[26rem]"
+            >
+              <div className="flex h-full flex-col justify-end px-6 py-8 sm:px-8 sm:py-10">
                 <div>
                   <span className="media-badge mb-6 inline-flex w-fit rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em]">
                     {category ? pickText(category.name, locale) : post.frontmatter.category}
@@ -69,14 +59,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                     {dict.common.breadcrumbsHome} / {dict.common.breadcrumbsBlog}
                   </p>
                   <p className="media-meta text-sm font-medium uppercase tracking-[0.2em]">
-                    {post.frontmatter.date} · {formatReadingTime(post.readingMinutes, locale)}
+                    {post.frontmatter.date}
                   </p>
                   <h1 className="media-meta mt-4 max-w-[20ch] font-[family-name:var(--font-heading)] text-4xl font-semibold leading-[0.94] tracking-tight sm:mt-5 sm:text-6xl">
                     {post.frontmatter.title}
                   </h1>
                 </div>
               </div>
-            </div>
+            </CoverVisual>
             <div className="px-6 py-8 sm:px-8">
               <div className="text-soft flex flex-wrap gap-4 text-sm">
                 <span>{dict.common.authorBy} {post.frontmatter.author}</span>

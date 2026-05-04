@@ -28,7 +28,6 @@ export type PostMeta = Omit<PostFrontmatter, "categorySlug" | "locale"> & {
   categorySlug: string;
   locale: "es" | "en";
   slug: string;
-  readingMinutes: number;
 };
 
 export type TocHeading = {
@@ -99,17 +98,6 @@ function extractHeadings(content: string): TocHeading[] {
     .filter((heading) => heading.level <= 3);
 }
 
-function calculateReadingMinutes(content: string) {
-  const words = content
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/`[^`]*`/g, " ")
-    .trim()
-    .split(/\s+/)
-    .filter(Boolean).length;
-
-  return Math.max(1, Math.ceil(words / 150));
-}
-
 async function readPostFile(slug: string) {
   const fullPath = path.join(postsDirectory, `${slug}.mdx`);
   return fs.readFile(fullPath, "utf8");
@@ -142,7 +130,6 @@ async function readMetaFromFile(filename: string, locale: Locale): Promise<PostM
     image: data.image,
     locale: data.locale ?? locale,
     featured: data.featured ?? false,
-    readingMinutes: calculateReadingMinutes(content)
   } as PostMeta;
 }
 
@@ -228,7 +215,6 @@ export async function getPostBySlug(slug: string, locale: Locale) {
       categorySlug: data.categorySlug ?? slugifyCategory(data.category),
       locale: data.locale ?? locale
     },
-    readingMinutes: calculateReadingMinutes(content),
     headings,
     content: compiledContent
   };
@@ -274,6 +260,4 @@ export async function getAllPostSlugs() {
   return Array.from(slugSet).sort();
 }
 
-export function formatReadingTime(minutes: number, locale: "es" | "en") {
-  return locale === "es" ? `${minutes} min de lectura` : `${minutes} min read`;
-}
+

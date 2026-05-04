@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { pickText } from "@/lib/i18n";
-import { formatReadingTime, getCategoryBySlug, type PostMeta } from "@/lib/posts";
+import { getCategoryBySlug, type PostMeta } from "@/lib/posts";
 
 type HeroSectionProps = {
   featuredPost: PostMeta;
@@ -103,19 +102,17 @@ export function HeroSection({ featuredPost, locale, stats, labels }: HeroSection
         </div>
         <div className="mt-8 flex flex-1 flex-col">
           <div className="spotlight-media relative h-52 overflow-hidden rounded-[2.2rem] sm:h-60">
-            <Image
-              src={featuredPost.image}
-              alt={featuredPost.title}
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-            />
+             <img
+               src="/Imagen/Gemini_Generated_Image_c27lkc27lkc27lkc.png"
+               alt={featuredPost.title}
+               className="h-full w-full object-cover"
+             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,11,9,0.08),rgba(15,11,9,0.38)),radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_32%)] dark:bg-[linear-gradient(180deg,rgba(15,11,9,0.12),rgba(15,11,9,0.52)),radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_32%)]" />
           </div>
           <div className="mt-6">
-            <p className="text-label text-[11px] font-semibold uppercase tracking-[0.26em]">
-              {featuredPost.date} · {formatReadingTime(featuredPost.readingMinutes, locale)}
-            </p>
+             <p className="text-label text-[11px] font-semibold uppercase tracking-[0.26em]">
+               {featuredPost.date}
+             </p>
             <h2 className="text-main mt-3 max-w-[18ch] font-[family-name:var(--font-heading)] text-[2.2rem] font-semibold leading-[1.02] tracking-tight">
               {featuredPost.title}
             </h2>

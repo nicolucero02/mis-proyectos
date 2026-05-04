@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { pickText, type Locale } from "@/lib/i18n";
 import { categories, siteNavigation } from "@/lib/site-data";
+import { LogoAuto } from "@/components/logo";
 
 type SiteFooterProps = {
   locale: Locale;
@@ -32,9 +33,7 @@ export function SiteFooter({ locale, labels }: SiteFooterProps) {
       <div className="border-subtle grid gap-10 border-b pb-12 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-charcoal text-sm font-bold text-ivory dark:bg-ivory dark:text-charcoal">
-              CV
-            </span>
+            <LogoAuto size={44} />
             <div>
               <p className="text-label text-[10px] font-semibold uppercase tracking-[0.32em]">
                 {labels.eyebrow}

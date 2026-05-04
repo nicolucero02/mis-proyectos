@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 
+const CATEGORY_GLOW = "rgba(180,120,80,0.2)";
+
 type CategoryCardProps = {
   name: string;
   slug: string;
@@ -21,7 +23,8 @@ export function CategoryCard({
   return (
     <Link
       href={`/categorias/${slug}`}
-      className="group bg-card-surface border-subtle relative overflow-hidden rounded-[2rem] border p-6 shadow-[0_16px_60px_rgba(20,16,13,0.06)] transition hover:-translate-y-1"
+      className="group bg-card-surface border-subtle relative overflow-hidden rounded-[2rem] border p-6 transition hover:-translate-y-1"
+      style={{ boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 16px 60px rgba(20,16,13,0.06), 0 0 40px -16px ${CATEGORY_GLOW}` }}
     >
       <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 -translate-y-8 rounded-full bg-copper/8 blur-2xl transition group-hover:bg-copper/14" />
       <p className="text-soft text-xs font-semibold uppercase tracking-[0.3em]">{eyebrow}</p>
