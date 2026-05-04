@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini RTS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div id="resources">
+      <span class="res gold">Gold: <b id="gold">0</b></span>
+      <span class="res food">Food: <b id="food">0</b></span>
+      <span class="res pop">Units: <b id="units">0</b>/<b id="maxUnits">20</b></span>
+    </div>
+    <div id="controls">
+      <button id="btnWorker" data-key="W" title="50 Gold"><span class="label">Train Worker</span><span class="key">W</span></button>
+      <button id="btnSoldier" data-key="S" title="100 Gold, 50 Food"><span class="label">Train Soldier</span><span class="key">S</span></button>
+      <button id="btnBarracks" data-key="B" title="150 Gold"><span class="label">Build Barracks</span><span class="key">B</span></button>
+      <button id="btnTower" data-key="T" title="200 Gold"><span class="label">Build Tower</span><span class="key">T</span></button>
+      <button id="btnCancel" data-key="Esc" title="Deselect / Cancel"><span class="label">Cancel</span><span class="key">Esc</span></button>
+    </div>
+    <div id="selection-info"></div>
+    <div id="toast"></div>
+  </div>
+
+  <div id="instructions-overlay" class="open">
+    <div class="panel">
+      <h1>Mini RTS</h1>
+      <div class="section">
+        <h2>Controls</h2>
+        <ul>
+          <li><b>Left Click</b> — Select unit or building</li>
+          <li><b>Drag</b> — Box-select multiple units</li>
+          <li><b>Shift + Click</b> — Add/remove from selection</li>
+          <li><b>Right Click</b> — Move (ground) or Attack (enemy)</li>
+          <li><b>Edge Pan</b> — Move mouse to screen edges to pan camera</li>
+          <li><b>Escape</b> — Cancel placement / Deselect all</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Economy</h2>
+        <ul>
+          <li><b>Gold</b> — Workers automatically find and mine gold clusters, then return to Townhall</li>
+          <li><b>Food</b> — Passively generated, caps your unit count</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Goal</h2>
+        <p>Gather gold, build a Barracks, train Soldiers, and destroy the enemy Townhall before they destroy yours.</p>
+      </div>
+      <button id="btnStart" class="start-btn">Start Game</button>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+  <script src="game.js"></script>
+</body>
+</html>
