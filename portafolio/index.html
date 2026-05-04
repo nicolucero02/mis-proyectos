@@ -195,6 +195,11 @@ section { padding: 100px 0; }
 .project-card:nth-child(8)::before { background: linear-gradient(135deg, var(--glow1), transparent 60%); }
 .project-card:nth-child(9)::before { background: linear-gradient(135deg, var(--glow3), transparent 60%); }
 .project-card:nth-child(10)::before { background: linear-gradient(135deg, var(--glow2), transparent 60%); }
+.project-card:nth-child(11)::before { background: linear-gradient(135deg, var(--glow1), transparent 60%); }
+.project-card:nth-child(12)::before { background: linear-gradient(135deg, var(--glow2), transparent 60%); }
+.project-card:nth-child(13)::before { background: linear-gradient(135deg, var(--glow3), transparent 60%); }
+.project-card:nth-child(14)::before { background: linear-gradient(135deg, var(--glow1), transparent 60%); }
+.project-card:nth-child(15)::before { background: linear-gradient(135deg, var(--glow2), transparent 60%); }
 .project-card:hover::before { opacity: 1; }
 
 .project-preview {
@@ -478,9 +483,9 @@ footer {
           <span class="emoji">⚖️</span>
         </div>
         <div class="project-info">
-          <div class="project-num c1">08 — WEB APP</div>
-          <h3 class="project-name">BMI Calc</h3>
-          <p class="project-desc">Calculadora de IMC con enfoque visual y premium para entender tu rango corporal de forma clara, rapida y moderna.</p>
+          <div class="project-num c1" data-i18n="proj8Label">08 — WEB APP</div>
+          <h3 class="project-name" data-i18n="proj8Name">BMI Calc</h3>
+          <p class="project-desc" data-i18n="proj8Desc">Calculadora de IMC con enfoque visual y premium para entender tu rango corporal de forma clara, rapida y moderna.</p>
           <div class="project-tags">
             <span class="tag">Web App</span><span class="tag">JavaScript</span><span class="tag">Health</span><span class="tag">UI</span>
           </div>
@@ -497,9 +502,9 @@ footer {
           <span class="emoji">🎯</span>
         </div>
         <div class="project-info">
-          <div class="project-num c3">09 — MINI GAME</div>
-          <h3 class="project-name">Color Flip</h3>
-          <p class="project-desc">Juego de reaccion mental donde tenes que decidir rapidamente si el color coincide con la palabra antes de que se acabe el tiempo.</p>
+          <div class="project-num c3" data-i18n="proj9Label">09 — MINI GAME</div>
+          <h3 class="project-name" data-i18n="proj9Name">Color Flip</h3>
+          <p class="project-desc" data-i18n="proj9Desc">Juego de reaccion mental donde tenes que decidir rapidamente si el color coincide con la palabra antes de que se acabe el tiempo.</p>
           <div class="project-tags">
             <span class="tag">Game</span><span class="tag">JavaScript</span><span class="tag">Arcade</span><span class="tag">UI</span>
           </div>
@@ -516,13 +521,108 @@ footer {
           <span class="emoji">⚡</span>
         </div>
         <div class="project-info">
-          <div class="project-num c2">10 — ARCADE GAME</div>
-          <h3 class="project-name">Tap Dash</h3>
-          <p class="project-desc">Juego arcade de reflejos donde debes girar en el momento exacto para seguir el camino sin caer. Aumenta la velocidad y pone a prueba tu timing.</p>
+          <div class="project-num c2" data-i18n="proj10Label">10 — ARCADE GAME</div>
+          <h3 class="project-name" data-i18n="proj10Name">Tap Dash</h3>
+          <p class="project-desc" data-i18n="proj10Desc">Juego arcade de reflejos donde debes girar en el momento exacto para seguir el camino sin caer. Aumenta la velocidad y pone a prueba tu timing.</p>
           <div class="project-tags">
             <span class="tag">Game</span><span class="tag">JavaScript</span><span class="tag">Arcade</span><span class="tag">Reflex</span>
           </div>
           <a href="https://nicolucero02.github.io/mis-proyectos/tap-dash/" class="project-link" target="_blank" rel="noreferrer">
+            <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Flappy Retro -->
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <div class="preview-bg" style="background:linear-gradient(135deg,#f1c40f,#e67e22)"></div>
+          <span class="emoji">🕹️</span>
+        </div>
+        <div class="project-info">
+          <div class="project-num c1" data-i18n="proj11Label">11 — ARCADE GAME</div>
+          <h3 class="project-name" data-i18n="proj11Name">Flappy Retro</h3>
+          <p class="project-desc" data-i18n="proj11Desc">Juego arcade inspirado en Flappy Bird con estética retro. Controlá el vuelo con precisión y superá obstáculos en un entorno minimalista y desafiante.</p>
+          <div class="project-tags">
+            <span class="tag">Game</span><span class="tag">JavaScript</span><span class="tag">Arcade</span><span class="tag">Retro</span>
+          </div>
+          <a href="../flappy-retro-nico/index.html" class="project-link">
+            <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Neon Serpent -->
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <div class="preview-bg" style="background:linear-gradient(135deg,#39ff14,#b026ff)"></div>
+          <span class="emoji">🐍</span>
+        </div>
+        <div class="project-info">
+          <div class="project-num c2" data-i18n="proj12Label">12 — ARCADE GAME</div>
+          <h3 class="project-name" data-i18n="proj12Name">Neon Serpent</h3>
+          <p class="project-desc" data-i18n="proj12Desc">Juego arcade inspirado en el clásico Snake con estética neon. Movete con precisión, crecé evitando colisiones y dominá un entorno visual vibrante y dinámico.</p>
+          <div class="project-tags">
+            <span class="tag">Game</span><span class="tag">JavaScript</span><span class="tag">Arcade</span><span class="tag">Neon</span>
+          </div>
+          <a href="../neon-serpent/docs/index.html" class="project-link">
+            <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ComicVerse -->
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <div class="preview-bg" style="background:linear-gradient(135deg,#ff4757,#3742fa)"></div>
+          <span class="emoji">🦸</span>
+        </div>
+        <div class="project-info">
+          <div class="project-num c3" data-i18n="proj13Label">13 — WEB APP</div>
+          <h3 class="project-name" data-i18n="proj13Name">ComicVerse</h3>
+          <p class="project-desc" data-i18n="proj13Desc">Aplicación web para explorar y descubrir cómics. Permite navegar contenido, visualizar detalles y sumergirse en un universo interactivo enfocado en la experiencia del usuario.</p>
+          <div class="project-tags">
+            <span class="tag">Web</span><span class="tag">JavaScript</span><span class="tag">UI</span><span class="tag">App</span>
+          </div>
+          <a href="https://mis-proyectos-comicverse.vercel.app/" class="project-link" target="_blank" rel="noreferrer">
+            <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- BodyTrack -->
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <div class="preview-bg" style="background:linear-gradient(135deg,#00b894,#74b9ff)"></div>
+          <span class="emoji">💪</span>
+        </div>
+        <div class="project-info">
+          <div class="project-num c1" data-i18n="proj14Label">14 — FITNESS APP</div>
+          <h3 class="project-name" data-i18n="proj14Name">BodyTrack</h3>
+          <p class="project-desc" data-i18n="proj14Desc">Aplicación web de seguimiento fitness que permite registrar métricas como peso, calorías, entrenamientos y progreso físico. Incluye visualización de datos y herramientas para mejorar hábitos y alcanzar objetivos de salud.</p>
+          <div class="project-tags">
+            <span class="tag">Web</span><span class="tag">JavaScript</span><span class="tag">Fitness</span><span class="tag">Tracking</span>
+          </div>
+          <a href="../bodytrack/index.html" class="project-link">
+            <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Calorías App -->
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <div class="preview-bg" style="background:linear-gradient(135deg,#a8e6cf,#1dd1a1)"></div>
+          <span class="emoji">🥗</span>
+        </div>
+        <div class="project-info">
+          <div class="project-num c2" data-i18n="proj15Label">15 — HEALTH APP</div>
+          <h3 class="project-name" data-i18n="proj15Name">Calorías App</h3>
+          <p class="project-desc" data-i18n="proj15Desc">Aplicación web para el seguimiento de calorías y alimentación diaria. Permite registrar comidas, controlar la ingesta nutricional y visualizar el progreso para mejorar hábitos de salud.</p>
+          <div class="project-tags">
+            <span class="tag">Web</span><span class="tag">JavaScript</span><span class="tag">Health</span><span class="tag">Tracking</span>
+          </div>
+          <a href="https://calorias-app.vercel.app/" class="project-link" target="_blank" rel="noreferrer">
             <span data-i18n="viewProject">Ver proyecto</span> <span class="arrow">&#8594;</span>
           </a>
         </div>
@@ -620,6 +720,30 @@ const i18n = {
     proj7Label: '07 — LANDING PAGE',
     proj7Name: 'Relax Sounds',
     proj7Desc: 'Sitio web para presentar una biblioteca de ambientes relajantes con acceso al canal de YouTube y secciones tematicas como oceano, lluvia y cafeteria.',
+    proj8Label: '08 — WEB APP',
+    proj8Name: 'BMI Calc',
+    proj8Desc: 'Calculadora de IMC con enfoque visual y premium para entender tu rango corporal de forma clara, rapida y moderna.',
+    proj9Label: '09 — MINI GAME',
+    proj9Name: 'Color Flip',
+    proj9Desc: 'Juego de reaccion mental donde tenes que decidir rapidamente si el color coincide con la palabra antes de que se acabe el tiempo.',
+    proj10Label: '10 — ARCADE GAME',
+    proj10Name: 'Tap Dash',
+    proj10Desc: 'Juego arcade de reflejos donde debes girar en el momento exacto para seguir el camino sin caer. Aumenta la velocidad y pone a prueba tu timing.',
+    proj11Label: '11 — ARCADE GAME',
+    proj11Name: 'Flappy Retro',
+    proj11Desc: 'Juego arcade inspirado en Flappy Bird con estética retro. Controlá el vuelo con precisión y superá obstáculos en un entorno minimalista y desafiante.',
+    proj12Label: '12 — ARCADE GAME',
+    proj12Name: 'Neon Serpent',
+    proj12Desc: 'Juego arcade inspirado en el clásico Snake con estética neon. Movete con precisión, crecé evitando colisiones y dominá un entorno visual vibrante y dinámico.',
+    proj13Label: '13 — WEB APP',
+    proj13Name: 'ComicVerse',
+    proj13Desc: 'Aplicación web para explorar y descubrir cómics. Permite navegar contenido, visualizar detalles y sumergirse en un universo interactivo enfocado en la experiencia del usuario.',
+    proj14Label: '14 — FITNESS APP',
+    proj14Name: 'BodyTrack',
+    proj14Desc: 'Aplicación web de seguimiento fitness que permite registrar métricas como peso, calorías, entrenamientos y progreso físico. Incluye visualización de datos y herramientas para mejorar hábitos y alcanzar objetivos de salud.',
+    proj15Label: '15 — HEALTH APP',
+    proj15Name: 'Calorías App',
+    proj15Desc: 'Aplicación web para el seguimiento de calorías y alimentación diaria. Permite registrar comidas, controlar la ingesta nutricional y visualizar el progreso para mejorar hábitos de salud.',
     viewProject: 'Ver proyecto',
     sectionTech: 'Tecnologías', sectionTechTitle: 'Stack utilizado',
     techStructure: 'Estructura', techStyles: 'Estilos', techLogic: 'Lógica',
@@ -651,6 +775,30 @@ const i18n = {
     proj7Label: '07 — LANDING PAGE',
     proj7Name: 'Relax Sounds',
     proj7Desc: 'Website presenting a library of relaxing ambiences with access to the YouTube channel and themed sections such as ocean, rain and cafe.',
+    proj8Label: '08 — WEB APP',
+    proj8Name: 'BMI Calc',
+    proj8Desc: 'BMI calculator with a premium visual approach to understand your body range in a clear, fast and modern way.',
+    proj9Label: '09 — MINI GAME',
+    proj9Name: 'Color Flip',
+    proj9Desc: 'Mental reaction game where you must quickly decide whether the color matches the word before time runs out.',
+    proj10Label: '10 — ARCADE GAME',
+    proj10Name: 'Tap Dash',
+    proj10Desc: 'Arcade reflex game where you must turn at the exact moment to follow the path without falling. Speed increases and tests your timing.',
+    proj11Label: '11 — ARCADE GAME',
+    proj11Name: 'Flappy Retro',
+    proj11Desc: 'Arcade game inspired by Flappy Bird with retro aesthetics. Control your flight with precision and overcome obstacles in a minimalist and challenging environment.',
+    proj12Label: '12 — ARCADE GAME',
+    proj12Name: 'Neon Serpent',
+    proj12Desc: 'Arcade game inspired by the classic Snake with neon aesthetics. Move with precision, grow by avoiding collisions and dominate a vibrant and dynamic visual environment.',
+    proj13Label: '13 — WEB APP',
+    proj13Name: 'ComicVerse',
+    proj13Desc: 'Web application to explore and discover comics. Allows you to browse content, view details and immerse yourself in an interactive universe focused on user experience.',
+    proj14Label: '14 — FITNESS APP',
+    proj14Name: 'BodyTrack',
+    proj14Desc: 'Fitness tracking web application that allows you to record metrics such as weight, calories, workouts and physical progress. Includes data visualization and tools to improve habits and achieve health goals.',
+    proj15Label: '15 — HEALTH APP',
+    proj15Name: 'Calorías App',
+    proj15Desc: 'Web application for tracking calories and daily food intake. Allows you to record meals, control nutritional intake and visualize progress to improve health habits.',
     viewProject: 'View project',
     sectionTech: 'Technologies', sectionTechTitle: 'Tech stack',
     techStructure: 'Structure', techStyles: 'Styling', techLogic: 'Logic',
