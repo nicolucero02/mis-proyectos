@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mis-proyectos",
+  "compatibility_date": "2026-05-04",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "ai-landing-builder"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
