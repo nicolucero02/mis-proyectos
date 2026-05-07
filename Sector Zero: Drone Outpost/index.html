@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sector Zero: Drone Outpost</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Exo+2:wght@300;400;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Main Menu -->
+    <div id="mainMenu" class="menu-screen active">
+      <h1>SECTOR ZERO</h1>
+      <div class="menu-buttons">
+        <button class="menu-button success" onclick="startGame()">
+          START MISSION
+        </button>
+        <button class="menu-button" onclick="instructionsReturnTarget='mainMenu'; showInstructions()">
+          SYSTEM MANUAL
+        </button>
+      </div>
+      <p style="margin-top: 30px; opacity: 0.4; font-size: 14px; letter-spacing: 3px;">AUTONOMOUS DEFENSE PROTOCOL</p>
+
+      <p class="made-by" style="opacity: 0.3; font-size: 11px;">SECTOR ZERO DEFENSE INITIATIVE</p>
+    </div>
+
+    <!-- Instructions Menu -->
+    <div id="instructionsMenu" class="menu-screen">
+      <div id="instructionsOverlay"></div>
+      <h2>SYSTEM MANUAL</h2>
+      <div class="instructions-content">
+        <h3>CONTROLS</h3>
+        <p>
+          <span class="key">WASD</span> or <span class="key">Arrow Keys</span> -
+          Move
+        </p>
+        <p><span class="key">Mouse</span> - Look around</p>
+        <p><span class="key">Left Click</span> - Shoot</p>
+        <p><span class="key">Right Click</span> - Switch weapons</p>
+        <p><span class="key">P</span> - Pause / Resume</p>
+        <p><span class="key">ESC</span> - Release pointer lock</p>
+
+        <h3>WEAPONS</h3>
+        <p><strong>Pulse Rifle:</strong> Single-shot precision weapon</p>
+        <p><strong>Plasma Cannon:</strong> Rapid-fire suppression weapon</p>
+
+        <h3>HOSTILE UNITS</h3>
+        <p>
+          <strong>Scout Drone:</strong> Standard hostile unit (available from threat level 1)
+        </p>
+        <p><strong>Interceptor:</strong> Fast but weak (threat level 2+)</p>
+        <p><strong>Heavy Mech:</strong> Slow but tough (threat level 4+)</p>
+        <p><strong>Command Unit:</strong> Large boss unit (threat level 6+)</p>
+
+        <h3>REPAIR SYSTEM</h3>
+        <p>Collect repair kits to restore 25 shield integrity</p>
+        <p>Avoid hostile unit attacks to survive longer</p>
+        <p>Repair kits spawn every 15 seconds</p>
+
+        <h3>THREAT LEVEL SYSTEM</h3>
+        <p>Survive endless threat levels of increasingly difficult hostile units</p>
+        <p>Each threat level has more hostile units and stronger types</p>
+      </div>
+      <div class="menu-buttons">
+        <button id="instructionsBackBtn" class="menu-button" onclick="returnFromInstructions()">
+          BACK
+        </button>
+      </div>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pauseMenu" class="menu-screen">
+      <div id="pauseOverlay"></div>
+      <h2>SYSTEM PAUSED</h2>
+      <div class="menu-buttons">
+        <button class="menu-button success" onclick="resumeGame()">
+          RESUME GAME
+        </button>
+        <button class="menu-button" onclick="instructionsReturnTarget='pause'; showInstructions()">
+          SYSTEM MANUAL
+        </button>
+        <button class="menu-button danger" onclick="quitToMainMenu()">
+          EXIT
+        </button>
+      </div>
+      <div class="pause-controls">
+        <div class="pause-audio">
+          <label>VOLUME:</label>
+          <input
+            type="range"
+            id="pauseVolume"
+            min="0"
+            max="100"
+            value="100"
+            oninput="updateMasterVolume(this.value)"
+          />
+          <button id="muteBtn" class="mute-button" onclick="toggleMute()">MUTE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="menu-screen">
+      <h1>MISSION FAILED</h1>
+      <div class="stats">
+        <p>Threat Levels Survived: <span id="finalWave">0</span></p>
+        <p>Hostile Units Neutralized: <span id="finalKills">0</span></p>
+        <p>Repair Kits Collected: <span id="finalHealthPacks">0</span></p>
+        <p>Final Shield Integrity: <span id="finalHealth">0</span></p>
+      </div>
+      <div class="menu-buttons">
+        <button class="menu-button success" onclick="restartGame()">
+          TRY AGAIN
+        </button>
+      </div>
+    </div>
+
+    <!-- Game UI (hidden initially) -->
+    <div id="gameUI" style="display: none">
+      <div id="blocker">
+        <div id="instructions">
+          <h1>SECTOR ZERO DEFENSE</h1>
+          <p>
+            Move: <span class="highlight">WASD</span> or
+            <span class="highlight">Arrow Keys</span>
+          </p>
+          <p>Look: <span class="highlight">Mouse</span></p>
+          <p>Shoot: <span class="highlight">Left Click</span></p>
+          <p>Switch Weapon: <span class="highlight">Right Click</span></p>
+          <p>
+            <strong>Click to play</strong>
+          </p>
+          <p><span class="highlight">P</span> to pause &nbsp;|&nbsp; Click to resume</p>
+        </div>
+      </div>
+
+      <div class="info">
+        <div id="gameStatus">Systems Active</div>
+        <div id="controls">WASD/Arrows to move, Mouse to look</div>
+        <div id="waveInfo">Threat Level 1</div>
+        <div id="killCount">Neutralized: 0</div>
+        <div>Left click to shoot / Right click to switch weapons</div>
+      </div>
+
+      <div id="crosshair"></div>
+
+      <div id="healthBar">
+        <div id="healthFill" style="width: 100%"></div>
+        <div id="healthText">Shield Integrity: 100/100</div>
+      </div>
+
+      <div id="miniRadar">
+        <div id="radarContainer">
+          <canvas id="radarCanvas" width="120" height="120"></canvas>
+          <div id="radarLabel">RADAR</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
